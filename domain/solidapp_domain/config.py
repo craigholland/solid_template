@@ -2,4 +2,4 @@ from common_core.config.baseclass import ConfigMeta
 
 
 class Config(metaclass=ConfigMeta):
-    _YAML_FILE = "domain_config.yaml"
+    _YAML_PATH = "domain_config.yaml"
