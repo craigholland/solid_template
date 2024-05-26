@@ -2,4 +2,6 @@
     - Initial Commit
     - Add Example Dataclasses
 
+## [0.1.1] - 2024-05-26
+    - Fix config yaml variable
 
