@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "solidapp_domain"
-version = "0.1.0"
+version = "0.1.1"
 description = "Base Domain Subpackage for SolidApp"
 authors = [ "Craig Holland <craig_holland@hotmail.com>",]
 readme = "README.md"
