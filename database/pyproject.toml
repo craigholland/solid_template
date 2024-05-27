@@ -1,0 +1,53 @@
+[build-system]
+requires = [ "poetry-core",]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "solidapp_database"
+version = "0.1.0"
+description = "Base Database Subpackage for SolidApp"
+authors = [ "Craig Holland <craig_holland@hotmail.com>",]
+readme = "README.md"
+[[tool.poetry.source]]
+name = "pypi-gcp"
+url = "https://us-west1-python.pkg.dev/cholland-form/pypi-gcp/simple"
+priority = "supplemental"
+
+[tool.black]
+line-length = 79
+include = "\\.pyi?$"
+exclude = "/(\n    \\.git\n  | \\.hg\n  | \\.mypy_cache\n  | \\.tox\n  | \\.venv\n  | _build\n  | buck-out\n  | build\n  | dist\n)/\n"
+
+[tool.isort]
+atomic = true
+profile = "black"
+line_length = 79
+skip_gitignore = true
+
+[tool.poetry.dependencies]
+python = "^3.12"
+toml = "^0.10.2"
+pyyaml = "^6.0.1"
+black = "^24.4.2"
+flake8 = "^7.0.0"
+pytest = "^8.2.0"
+tox = "^4.15.0"
+pre-commit = "^3.7.1"
+pycparser = "2.22"
+alembic = "1.13.1"
+psycopg2-binary = "^2.9.9"
+sqlalchemy-utils = "^0.41.2"
+sqla-wrapper = "^6.0.0"
+alembic-utils = "^0.8.3"
+
+[tool.poetry.dependencies.solidapp-domain]
+version = "0.1.1"
+source = "pypi-gcp"
+
+[tool.poetry.dependencies.common-core]
+version = "0.2.0"
+source = "pypi-gcp"
+
+[tool.poetry.plugins.dotenv]
+ignore = "false"
+location = ".env"
